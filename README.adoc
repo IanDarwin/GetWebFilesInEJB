@@ -1,0 +1,15 @@
+= GetWebContextFromEJB
+
+Several posts on CrackOverflow have wrestled with the issue of "how do I find files in the Web Context from an EJB"
+without resolving the issue in a way that is both (almost) clean, and portable.
+
+This demonstrates a portable, but slightly circuitous way, to get it.
+The answer is simple, have a ServletContextListener get the path, and save it in
+a static field in the EJB. No need for properties file nor System properties,
+and no need to figure out the exact path!
+
+Simple, and it works. At least: tested on WildFly 10.x.
+
+Only tested in War deployment; I can not be bothered to create a legacy EAR deployment.
+
+For more details, UTSL.

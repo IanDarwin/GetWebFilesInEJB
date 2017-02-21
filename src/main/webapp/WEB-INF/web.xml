@@ -1,0 +1,6 @@
+<web-app>
+
+	<listener>
+		<listener-class>playweb.ContextListener</listener-class>
+	</listener>
+</web-app>
